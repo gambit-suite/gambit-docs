@@ -1,17 +1,9 @@
-# Welcome to MkDocs
+# Welcome GAMBIT Documentation
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+**GAMBIT (Genomic Approximation Method for Bacterial Identification and Tracking)** is a tool for rapid taxonomic identification of microbial pathogens. It uses an efficient genomic distance metric along with a curated database identify genome assemblies.
 
-## Commands
+## Citation
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+Please cite this paper if publishing work using GAMBIT:
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+> Lumpe J, Gumbleton L, Gorzalski A, Libuit K, Varghese V, Lloyd T, et al. (2023) GAMBIT (Genomic Approximation Method for Bacterial Identification and Tracking): A methodology to rapidly leverage whole genome sequencing of bacterial isolates for clinical identification. PLoS ONE 18(2): e0277575. https://doi.org/10.1371/journal.pone.0277575

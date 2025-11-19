@@ -5,6 +5,13 @@ site_url: https://gambit-suite.github.io/gambit
 
 repo_url: https://github.com/gambit-suite/gambit-docs
 
+nav:
+  - GAMBIT: 
+     - Home: index.md
+     - Guides:
+        - Guide to GAMBIT: guides/gambit.md
+        - Guide to GAMBIT Database Creation: guides/gambit_database.md
+
 theme: 
   name: material
   logo: assets/logos/Theiagen-Logo-White.png
