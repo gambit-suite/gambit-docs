@@ -11,6 +11,7 @@ nav:
      - Getting Started:
         - With the Command-Line: getting_started/commandline.md
         - With Terra.bio: getting_started/terra.md
+     - Technical Details: technical_details.md  
      - Databases:
         - Overview: databases/overview.md
         - GAMBIT Prokaryotic Database: databases/gambit_prokaryotic.md
