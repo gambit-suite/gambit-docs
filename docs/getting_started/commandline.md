@@ -1,10 +1,10 @@
-## Using GAMBIT on your local machine
+# Using GAMBIT on your local machine
 
-This guide assumes you have prior knowledge of how to install software locally in a Unix command-line environment. The necessary databases will have to be downloaded independently to be used with GAMBIT. They are available in the [GAMBIT Databases](#gambit-databases) section of this document and should be placed in a directory of your choice. The directory should not contain any other files with the same extensions.
+This guide assumes you have prior knowledge of how to install software locally in a Unix command-line environment. The necessary databases will have to be downloaded independently to be used with GAMBIT. They are available in the [GAMBIT Databases](../databases/overview.md) section of this document and should be placed in a directory of your choice. The directory should not contain any other files with the same extensions.
 
-### Installation
+## Installation
 
-#### Installation from Bioconda
+### Installation from Bioconda
 
 The recommended way to install the tool is through the [Conda](https://www.anaconda.com/products/distribution) package manager from the [Bioconda](https://bioconda.github.io/) channel. You can simply run the following command to download GAMBIT’s latest version:
 
@@ -12,7 +12,7 @@ The recommended way to install the tool is through the [Conda](https://www.anac
 conda install -c bioconda gambit
 ```
 
-#### Installation with Docker
+### Installation with Docker
 
 The latest version of GAMBIT software is available as a Docker container in Theiagen’s [Google Artifact Registry (GAR)](https://cloud.google.com/artifact-registry). If [Docker is installed in your system](https://docs.docker.com/engine/install/) you can simply run the following command to download the container:
 
@@ -26,7 +26,7 @@ You can access the container with the following command (note: with the `-v $PWD
 docker run -v $PWD:/data -it us-docker.pkg.dev/general-theiagen/staphb/gambit:1.0.0 bash
 ```
 
-#### Installation from source
+### Installation from source
 
 These instructions assume that you have [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), [Python](https://www.python.org/downloads/) and [Pip](https://pip.pypa.io/en/stable/installation/) installed in your system. Navigate to <https://github.com/jlumpe/gambit> and clone the repository, or use the following command:
 
@@ -40,7 +40,7 @@ Installing from source requires the Cython package as well as a C compiler to be
 pip install .
 ```
 
-### Usage
+## Usage
 
 Positional arguments are one or more FASTA files containing query genome assemblies. You must provide the path to the directory containing the database files using either the `-d` option (*before* the `query` subcommand) or by setting the `GAMBIT_DB_PATH` environment variable. The results can be optionally outputted to a file, but by default, they are written to the terminal.
 
@@ -48,7 +48,7 @@ Positional arguments are one or more FASTA files containing query genome assembl
 gambit [-d </path/to/database/>] query [-o results.csv] genome1.fasta genome2.fasta ...
 ```
 
-#### Advanced Usage
+### Advanced Usage
 
 There are many available commands in GAMBIT:
 

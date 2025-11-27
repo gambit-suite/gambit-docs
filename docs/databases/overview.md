@@ -20,6 +20,6 @@ Because GAMBIT databases have built-in species thresholds, genomes are included 
 
 -   <center>[Prokaryotic Databases](gambit_prokaryotic.md){ .md-button .md-button--secondary }</center>
 
--   <center>[Fungal Databases](getting_started/gambit_fungal.md){ .md-button .md-button--secondary }</center>
+-   <center>[Fungal Databases](gambit_fungal.md){ .md-button .md-button--secondary }</center>
 
 ///
