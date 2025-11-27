@@ -19,6 +19,8 @@ nav:
         - Creating a GAMBIT Database: 
           - Overview: databases/creating_database.md
           - Getting Started: databases/getting_started.md
+          - Pipeline Modules: databases/pipeline_modules.md
+          - Module-specific Documentation: databases/create_gambit_db.md
      - FAQ: faq.md
 
 theme: 
@@ -94,6 +96,7 @@ plugins:
       type: iso_date
   - search
   - glightbox
+  - mermaid2
   # - section-index
 
 extra_javascript:

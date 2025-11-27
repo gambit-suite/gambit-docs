@@ -5,6 +5,107 @@ This guide will help you install and run [GAMBITdb-nf](https://github.com/gambit
 !!! tip "GAMBITdb-nf input"
     [GAMBITdb-nf](https://github.com/gambit-suite/gambitdb-nf) is designed to take an tsv input from a [GTDB release](https://gtdb.ecogenomic.org/downloads) and filter out potentially poor data based on CheckM2, number of contigs, and where there are less than 2 genomes (defaults). The pipeline will then download the genomes of provided accessions, downsample for species where n genomes is greater than the `downsample_threshold` and create the gambit metadata sqlite file, and the h5 signature file. 
 
+## Workflow Diagram
+
+```mermaid
+flowchart TD
+    A[Input: GTDB Data] --> B[GTDB_PARSER]
+
+    B --> C[Species Taxa]
+    B --> D[Genome Assembly Metadata]
+    B --> E[Representative Genomes]
+
+    D --> F[BULK_DOWNLOADER]
+
+    F --> G[Downloaded Assembly Metadata]
+    F --> H[FASTA Directory]
+
+    G --> I[GENERATE_SPECIES_LISTS]
+    C --> I
+
+    I --> J[Species File Directories]
+
+    J --> K[GAMBIT_DISTS_BY_SPECIES]
+    K --> L[GAMBIT Signatures]
+    K --> M[GAMBIT Matrices]
+    K --> N[GAMBIT Diameters]
+
+    N --> O[GAMBIT_CURATE_SPECIES]
+    H --> O
+    M --> O
+
+    O --> P[Curated Species Metadata]
+    O --> Q[Curated Species File]
+
+    P --> R[ANALYZE_CURATED]
+    R --> S[Species Analysis]
+    R --> T[Downsample Targets]
+
+    S --> U[COMBINE_ANALYSIS_RESULTS]
+    T --> U
+
+    U --> V[Combined Species Analysis]
+    U --> W[Combined Downsample Targets]
+
+    W --> X[STRATIFIED_DOWNSAMPLE]
+    M --> X
+    P --> X
+    E --> X
+
+    X --> Y[Keep Genomes]
+    X --> Z[Remove Genomes]
+
+    Z --> AA[FILTER_COMBINE_GENOMES]
+    H --> AA
+    G --> AA
+    C --> AA
+
+    AA --> BB[Filtered Data]
+
+    BB --> CC[GAMBIT_DISTS_COMBINED]
+
+    CC --> DD[Combined Signatures]
+    CC --> EE[Combined Matrix]
+    CC --> FF[Combined Matrix NPY]
+    CC --> GG[Combined Matrix IDX]
+    CC --> HH[Combined Diameters]
+
+    BB --> II[GAMBIT_CURATE_FINAL]
+    HH --> II
+    FF --> II
+    GG --> II
+
+    II --> JJ[Curated Final Metadata]
+    II --> KK[Curated Final Species File]
+
+    KK --> LL[ADD_GENUS_ROWS]
+    LL --> MM[Species with Genus]
+
+    JJ --> NN[CREATE_GAMBIT_DB]
+    MM --> NN
+    DD --> NN
+
+    NN --> OO[Final GAMBIT Database]
+    NN --> PP[Final GAMBIT Signatures]
+
+    style A fill:#e1f5fe
+    style OO fill:#c8e6c9
+    style PP fill:#c8e6c9
+    style B fill:#fff3e0
+    style F fill:#fff3e0
+    style I fill:#fff3e0
+    style K fill:#fff3e0
+    style O fill:#fff3e0
+    style R fill:#fff3e0
+    style U fill:#fff3e0
+    style X fill:#fff3e0
+    style AA fill:#fff3e0
+    style CC fill:#fff3e0
+    style II fill:#fff3e0
+    style LL fill:#fff3e0
+    style NN fill:#fff3e0
+```
+
 ## Prerequisites
 
 Before running gambitdb-nf, ensure you have:
@@ -233,9 +334,8 @@ If you encounter memory errors, adjust resources in `conf/base.config` or use a 
 
 ## Next Steps
 
-- Learn about [pipeline modules](modules/overview.md)
-- Review the [workflow diagram](workflow_diagram.md)
-- Explore [module-specific documentation](modules/create_gambit_db.md)
+- Learn about [pipeline modules](pipeline_modules.md)
+- Explore [module-specific documentation](create_gambit_db.md)
 
 ## Getting Help
 
