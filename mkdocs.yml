@@ -89,14 +89,19 @@ markdown_extensions:
       slugify: !!python/object/apply:pymdownx.slugs.slugify
         kwds:
           case: lower
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom
 
 plugins:
   - git-revision-date-localized:
       enable_creation_date: true
       type: iso_date
   - search
-  - glightbox
   - mermaid2
+  - glightbox
   # - section-index
 
 extra_javascript:

@@ -232,8 +232,6 @@ GTDB_PARSER → BULK_DOWNLOADER → GENERATE_SPECIES_LISTS
                                  CREATE_GAMBIT_DB
 ```
 
-For a detailed visual workflow, see the [Workflow Diagram](../workflow_diagram.md).
-
 ## Workflow Variants
 
 ### GAMBITDB_SIMPLE
