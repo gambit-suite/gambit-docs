@@ -1,6 +1,6 @@
 site_name: GAMBIT
 site_author: Theiagen Genomics
-site_description: TDB
+site_description: Genomic Approximation Method for Bacterial Identification and Tracking Documentation
 site_url: https://gambit-suite.github.io/gambit
 
 repo_url: https://github.com/gambit-suite/gambit-docs
@@ -8,9 +8,15 @@ repo_url: https://github.com/gambit-suite/gambit-docs
 nav:
   - GAMBIT: 
      - Home: index.md
-     - Guides:
-        - Guide to GAMBIT: guides/gambit.md
-        - Guide to GAMBIT Database Creation: guides/gambit_database.md
+     - Getting Started:
+        - With the Command-Line: getting_started/commandline.md
+        - With Terra.bio: getting_started/terra.md
+     - Databases:
+        - Overview: databases/overview.md
+        - GAMBIT Prokaryotic Database: databases/gambit_prokaryotic.md
+        - GAMBIT Fungal Database: databases/gambit_fungal.md
+        - Creating a GAMBIT Database: databases/creating_database.md
+     - FAQ: faq.md
 
 theme: 
   name: material

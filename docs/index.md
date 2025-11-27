@@ -1,9 +1,71 @@
-# Welcome GAMBIT Documentation
+# GAMBIT Documentation
 
-**GAMBIT (Genomic Approximation Method for Bacterial Identification and Tracking)** is a tool for rapid taxonomic identification of microbial pathogens. It uses an efficient genomic distance metric along with a curated database identify genome assemblies.
+![GAMBIT LOGO](assets/figures/GAMBIT-LOGO-BLACK.png)
+
+**GAMBIT (Genomic Approximation Method for Bacterial Identification and Tracking)** determines the taxon of the query genome assembly using a ***k*-mer-based approach** to match the assembly sequence to the closest complete genome in a database.
+
+!!! dna "GAMBIT genomic distance metric correlates with sequence identity!"
+    GAMBIT uses an efficient genomic distance metric along with a curated database to identify genome assemblies in seconds. You can read more about how the distance metric is calculated in the [Technical Details](#technical-details) section!
+
+
+## Getting Started
+
+If the **distance between the query genome assembly and the closest genome in the database is within a built-in species threshold**, GAMBIT will assign the query genome to that species. Species thresholds are determined through a combination of automated and manual curation processes based on the diversity within the taxon.
+
+/// html | div[class="grid cards" markdown]
+
+-   <center>[Terra Users](getting_started/terra.md){ .md-button .md-button--secondary }
+
+    ---
+
+    Learn how to use our workflows on Terra!</center>
+
+-   <center>[Command-line Users](getting_started/commandline.md){ .md-button .md-button--secondary }
+
+    ---
+
+    Learn how to use our workflows on the command-line!</center>
+
+///
+
+!!! tip "GAMBIT includes a manually curated, high-quality database!"
+    GAMBIT databases consist of two files:
+
+    1. A **signatures file** containing the GAMBIT signatures (compressed representations) of all genomes represented in the database 
+    2. A **metadata file** relating the represented genomes to their genome accessions, taxonomic identifications, and species thresholds
+  
+<div class="grid cards" markdown>
+
+-   :material-file-code: **Latest GAMBIT Version**
+
+    ---
+
+    [GAMBIT v1.1.0 source code](https://github.com/jlumpe/gambit/releases/tag/v1.1.0)
+
+    [GAMBITdb-nf source code](https://github.com/gambit-suite/gambitdb-nf)
+
+-   :material-database: **Latest Database Version**
+
+    ---
+
+    GAMBIT Prokaryotic GTDB Database v2.1.0
+
+    - [gambit-metadata-2.1.0-20250808.gdb](https://storage.cloud.google.com/gambit-databases-rp/2.1.0/gambit-metadata-2.1.0-20250808.gdb)
+    - [gambit-signatures-2.1.0-20250808.gs](https://storage.cloud.google.com/gambit-databases-rp/2.1.0/gambit-signatures-2.1.0-20250808.gs)
+
+    GAMBIT Fungal Database v1.0.0
+
+    - [gambit-fungal-metadata-1.0.0-20241213.gdb](https://storage.cloud.google.com/gambit-databases-rp/fungal-version/1.0.0/gambit-fungal-metadata-1.0.0-20241213.gdb)
+    - [gambit-fungal-signatures-1.0.0-20241213.gs](https://storage.cloud.google.com/gambit-databases-rp/fungal-version/1.0.0/gambit-fungal-signatures-1.0.0-20241213.gs)
+
+</div>
 
 ## Citation
 
 Please cite this paper if publishing work using GAMBIT:
 
 > Lumpe J, Gumbleton L, Gorzalski A, Libuit K, Varghese V, Lloyd T, et al. (2023) GAMBIT (Genomic Approximation Method for Bacterial Identification and Tracking): A methodology to rapidly leverage whole genome sequencing of bacterial isolates for clinical identification. PLoS ONE 18(2): e0277575. https://doi.org/10.1371/journal.pone.0277575
+
+## Help Available
+
+Please feel free to reach out to <support@theiagen.com> with any questions you might have.
