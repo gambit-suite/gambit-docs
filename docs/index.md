@@ -62,9 +62,13 @@ If the **distance between the query genome assembly and the closest genome in th
 
 ## Citation
 
-Please cite this paper if publishing work using GAMBIT:
+Please cite this paper if publishing work using **GAMBIT**:
 
 > Lumpe J, Gumbleton L, Gorzalski A, Libuit K, Varghese V, Lloyd T, et al. (2023) GAMBIT (Genomic Approximation Method for Bacterial Identification and Tracking): A methodology to rapidly leverage whole genome sequencing of bacterial isolates for clinical identification. PLoS ONE 18(2): e0277575. https://doi.org/10.1371/journal.pone.0277575
+
+Please cite the reference below when using the **GAMBIT Fungal Database v0.2.0:**
+
+> Ambrosio III, F. J., Scribner, M. R., Wright, S. M., Otieno, J. R., Doughty, E. L., Gorzalski, A., ... & Hess, D. (2023). TheiaEuk: a species-agnostic bioinformatics workflow for fungal genomic characterization. _Frontiers in Public Health_, _11_. <https://doi.org/10.3389/fpubh.2023.1198213>
 
 ## Help Available
 
