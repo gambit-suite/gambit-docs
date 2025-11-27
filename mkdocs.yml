@@ -16,7 +16,9 @@ nav:
         - Overview: databases/overview.md
         - GAMBIT Prokaryotic Database: databases/gambit_prokaryotic.md
         - GAMBIT Fungal Database: databases/gambit_fungal.md
-        - Creating a GAMBIT Database: databases/creating_database.md
+        - Creating a GAMBIT Database: 
+          - Overview: databases/creating_database.md
+          - Getting Started: databases/getting_started.md
      - FAQ: faq.md
 
 theme: 

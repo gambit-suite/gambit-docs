@@ -24,6 +24,57 @@ The goal in creating a database for GAMBIT is two-fold:
 
     ---
 
-    The full list of databases available can be consulted [here](./gambit.md#gambit-databases), with information on what curation steps were followed and what genomes are included.
+    The full list of databases available can be consulted [here](../databases/overview.md), with information on what curation steps were followed and what genomes are included.
 
 </div>
+
+## Database Creation Process
+
+### Creating a GAMBIT database from a pre-curated list of genomes - GTDB and GAMBITdb-nf
+
+The creation and curation of a GAMBIT database is a laborious process which involves sourcing genomic information, setting minimum quality thresholds, and finally building a signature and a database file.
+
+!!! dna "Sourcing Genome Information from GTDB"
+    As of [v2.0.0 of the GAMBIT Prokaryotic database](../databases/gambit_prokaryotic.md#gambit-gtdb-database-v200), [GTDB](https://gtdb.ecogenomic.org/) is the selected source of quality information for genomes sourced from [RefSeq](https://www.ncbi.nlm.nih.gov/refseq/) and [GenBank](https://www.ncbi.nlm.nih.gov/genbank/). Automation is available through the [GAMBITdb-nf](https://github.com/gambit-suite/gambitdb-nf) which takes as input a GTDB release metadata spreadsheet including information on taxonomy and assembly quality metrics. GTDB’s release spreadsheets are available at [https://data.gtdb.ecogenomic.org/releases](https://data.gtdb.ecogenomic.org/releases/). Taxonomic information can be sourced from [NCBI Taxonomy](https://www.ncbi.nlm.nih.gov/taxonomy) ofr [GTDB](https://gtdb.ecogenomic.org/).
+
+---
+
+#### GAMBITdb-nf 
+
+[GAMBITdb-nf](https://github.com/gambit-suite/gambitdb-nf) is a [Nextflow](https://www.nextflow.io/) pipeline for creating and maintaining GAMBIT databases from [GTDB (Genome Tree Database)](https://gtdb.ecogenomic.org/) metadata. This pipeline automates the entire process of database creation, from quality filtering and genome downloading to k-mer signature generation and strategic downsampling.
+
+!!! tip "Key Features"
+    - **Automated Quality Control**: Filter genomes based on [CheckM2](https://github.com/chklovski/CheckM2) completeness, contamination, and assembly quality
+    - **Efficient Bulk Downloading**: Parallel download of genome assemblies from [NCBI](https://www.ncbi.nlm.nih.gov/) with checkpoint support
+    - **Smart Downsampling**: Stratified downsampling for large species clusters to optimize database size
+    - **Flexible Workflows**: Choose between simple and downsampling workflows based on your needs
+    - **Comprehensive Monitoring**: Built-in execution reports and detailed logging
+    - **Container Support**: Works with [Docker](https://www.docker.com/), [Singularity](https://docs.sylabs.io/guides/3.5/user-guide/introduction.html), [Conda](https://anaconda.org/anaconda/conda), [Podman](https://podman.io/), or [Apptainer](https://apptainer.org/)
+
+!!! dna "Support"
+    - [GitHub Repository](https://github.com/gambit-suite/gambitdb-nf)
+    - [Report Issues](https://github.com/gambit-suite/gambitdb-nf/issues)
+
+##### Pipeline Workflows
+
+[GAMBITdb-nf](https://github.com/gambit-suite/gambitdb-nf) provides two main workflows:
+
+**GAMBITDB_SIMPLE**
+
+A streamlined workflow for **creating GAMBIT databases without downsampling**. Best for smaller datasets or when you want to include all available genomes.
+
+**GAMBITDB_DOWNSAMPLE**
+
+An advanced workflow with **intelligent downsampling for large species clusters**. Ideal for comprehensive GTDB releases where some species have thousands of genomes.
+
+##### Output
+
+The pipeline produces:
+
+- **GAMBIT Database**: Ready-to-use database files for GAMBIT analysis
+- **K-mer Signatures**: Genomic signatures for all included genomes
+- **Distance Matrices**: Pairwise genomic distances
+- **Quality Reports**: Curation metadata and analysis results
+- **Execution Reports**: Resource usage and pipeline performance metrics
+
+---
