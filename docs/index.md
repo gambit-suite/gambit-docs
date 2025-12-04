@@ -1,6 +1,8 @@
 # GAMBIT Documentation
 
-![GAMBIT LOGO](assets/figures/GAMBIT-LOGO-BLACK.png)
+<p align="center">
+  <img src="assets/figures/GAMBIT-LOGO-BLACK.png" />
+</p>
 
 **GAMBIT (Genomic Approximation Method for Bacterial Identification and Tracking)** determines the taxon of the query genome assembly using a ***k*-mer-based approach** to match the assembly sequence to the closest complete genome in a database.
 
