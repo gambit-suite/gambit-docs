@@ -50,15 +50,9 @@ If the **distance between the query genome assembly and the closest genome in th
 
     ---
 
-    GAMBIT Prokaryotic GTDB Database v2.1.0
+    [GAMBIT Prokaryotic GTDB Database v2.1.0](./databases/gambit_prokaryotic.md#gambit-gtdb-database-v210)
 
-    - [gambit-metadata-2.1.0-20250808.gdb](https://storage.cloud.google.com/gambit-databases-rp/2.1.0/gambit-metadata-2.1.0-20250808.gdb)
-    - [gambit-signatures-2.1.0-20250808.gs](https://storage.cloud.google.com/gambit-databases-rp/2.1.0/gambit-signatures-2.1.0-20250808.gs)
-
-    GAMBIT Fungal Database v1.0.0
-
-    - [gambit-fungal-metadata-1.0.0-20241213.gdb](https://storage.cloud.google.com/gambit-databases-rp/fungal-version/1.0.0/gambit-fungal-metadata-1.0.0-20241213.gdb)
-    - [gambit-fungal-signatures-1.0.0-20241213.gs](https://storage.cloud.google.com/gambit-databases-rp/fungal-version/1.0.0/gambit-fungal-signatures-1.0.0-20241213.gs)
+    [GAMBIT Fungal Database v1.0.0](./databases/gambit_fungal.md#gambit-fungal-database-v100)
 
 </div>
 
