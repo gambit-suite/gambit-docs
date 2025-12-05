@@ -55,19 +55,23 @@ The creation and curation of a GAMBIT database is a laborious process which invo
     - [GitHub Repository](https://github.com/gambit-suite/gambitdb-nf)
     - [Report Issues](https://github.com/gambit-suite/gambitdb-nf/issues)
 
-##### Pipeline Workflows
-
 [GAMBITdb-nf](https://github.com/gambit-suite/gambitdb-nf) provides two main workflows:
 
-**GAMBITDB_SIMPLE**
+<div class="grid cards" markdown>
 
-A streamlined workflow for **creating GAMBIT databases without downsampling**. Best for smaller datasets or when you want to include all available genomes.
+-   **GAMBITDB_SIMPLE**
 
-**GAMBITDB_DOWNSAMPLE**
+    ---
 
-An advanced workflow with **intelligent downsampling for large species clusters**. Ideal for comprehensive GTDB releases where some species have thousands of genomes.
+    A streamlined workflow for **creating GAMBIT databases without downsampling**. Best for smaller datasets or when you want to include all available genomes.
 
-##### Output
+-   **GAMBITDB_DOWNSAMPLE**
+
+    ---
+
+    An advanced workflow with **intelligent downsampling for large species clusters**. Ideal for comprehensive GTDB releases where some species have thousands of genomes.
+
+</div>
 
 The pipeline produces:
 
