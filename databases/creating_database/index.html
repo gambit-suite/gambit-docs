@@ -9,13 +9,13 @@
         <meta name="author" content="Theiagen Genomics">
       
       
-        <link rel="canonical" href="https://gambit-suite.github.io/gambit-docs/main/databases/pipeline_modules/">
+        <link rel="canonical" href="https://gambit-suite.github.io/gambit-docs/databases/creating_database/">
       
       
-        <link rel="prev" href="../getting_started/">
+        <link rel="prev" href="../gambit_fungal/">
       
       
-        <link rel="next" href="../create_gambit_db/">
+        <link rel="next" href="../getting_started/">
       
       
         
@@ -26,7 +26,7 @@
     
     
       
-        <title>Pipeline Modules - GAMBIT</title>
+        <title>Overview - GAMBIT</title>
       
     
     
@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#module-overview" class="md-skip">
+        <a href="#gambit-database-creation" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pipeline Modules
+              Overview
             
           </span>
         </div>
@@ -712,10 +712,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../creating_database/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -731,6 +758,71 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#database-creation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Database Creation Process
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Database Creation Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-gambit-database-from-a-pre-curated-list-of-genomes-gtdb-and-gambitdb-nf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a GAMBIT database from a pre-curated list of genomes - GTDB and GAMBITdb-nf
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a GAMBIT database from a pre-curated list of genomes - GTDB and GAMBITdb-nf">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gambitdb-nf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GAMBITdb-nf
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -768,37 +860,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Pipeline Modules
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../pipeline_modules/" class="md-nav__link">
         
   
   
@@ -814,343 +879,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#pipeline-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Pipeline Architecture
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-modules" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Core Modules
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Core Modules">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#data-ingestion-modules" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Data Ingestion Modules
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Data Ingestion Modules">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#gtdb_parser" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GTDB_PARSER
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bulk_downloader" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        BULK_DOWNLOADER
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#processing-modules" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Processing Modules
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Processing Modules">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#generate_species_lists" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GENERATE_SPECIES_LISTS
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gambit_dists_by_species" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GAMBIT_DISTS_BY_SPECIES
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gambit_dists_combined" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GAMBIT_DISTS_COMBINED
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gambit_curate" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GAMBIT_CURATE
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#optimization-modules" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Optimization Modules
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Optimization Modules">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#analyze_curated" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ANALYZE_CURATED
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stratified_downsample" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        STRATIFIED_DOWNSAMPLE
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#filter_combine_genomes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        FILTER_COMBINE_GENOMES
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#utility-modules" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Utility Modules
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Utility Modules">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#combine_analysis_results" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        COMBINE_ANALYSIS_RESULTS
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add_genus_rows" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ADD_GENUS_ROWS
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#database-creation-modules" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Database Creation Modules
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Database Creation Modules">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#create_gambit_db" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CREATE_GAMBIT_DB
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#module-dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Module Dependencies
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#workflow-variants" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Workflow Variants
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Workflow Variants">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#gambitdb_simple" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GAMBITDB_SIMPLE
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gambitdb_downsample" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GAMBITDB_DOWNSAMPLE
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#module-documentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Module Documentation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resource-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Resource Requirements
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1262,234 +990,34 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pipeline-architecture" class="md-nav__link">
+  <a href="#database-creation-process" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Pipeline Architecture
+        Database Creation Process
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-modules" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Core Modules
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Core Modules">
+    <nav class="md-nav" aria-label="Database Creation Process">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#data-ingestion-modules" class="md-nav__link">
+  <a href="#creating-a-gambit-database-from-a-pre-curated-list-of-genomes-gtdb-and-gambitdb-nf" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Data Ingestion Modules
+        Creating a GAMBIT database from a pre-curated list of genomes - GTDB and GAMBITdb-nf
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Data Ingestion Modules">
+    <nav class="md-nav" aria-label="Creating a GAMBIT database from a pre-curated list of genomes - GTDB and GAMBITdb-nf">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#gtdb_parser" class="md-nav__link">
+  <a href="#gambitdb-nf" class="md-nav__link">
     <span class="md-ellipsis">
       
-        GTDB_PARSER
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bulk_downloader" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        BULK_DOWNLOADER
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#processing-modules" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Processing Modules
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Processing Modules">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#generate_species_lists" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GENERATE_SPECIES_LISTS
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gambit_dists_by_species" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GAMBIT_DISTS_BY_SPECIES
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gambit_dists_combined" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GAMBIT_DISTS_COMBINED
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gambit_curate" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GAMBIT_CURATE
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#optimization-modules" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Optimization Modules
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Optimization Modules">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#analyze_curated" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ANALYZE_CURATED
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stratified_downsample" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        STRATIFIED_DOWNSAMPLE
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#filter_combine_genomes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        FILTER_COMBINE_GENOMES
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#utility-modules" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Utility Modules
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Utility Modules">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#combine_analysis_results" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        COMBINE_ANALYSIS_RESULTS
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add_genus_rows" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ADD_GENUS_ROWS
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#database-creation-modules" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Database Creation Modules
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Database Creation Modules">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#create_gambit_db" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CREATE_GAMBIT_DB
+        GAMBITdb-nf
       
     </span>
   </a>
@@ -1503,78 +1031,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#module-dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Module Dependencies
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#workflow-variants" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Workflow Variants
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Workflow Variants">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#gambitdb_simple" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GAMBITDB_SIMPLE
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gambitdb_downsample" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GAMBITDB_DOWNSAMPLE
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#module-documentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Module Documentation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resource-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Resource Requirements
-      
-    </span>
-  </a>
   
 </li>
       
@@ -1640,7 +1096,7 @@
     
     
       <li class="md-path__item">
-        <a href="../creating_database/" class="md-path__link">
+        <a href="./" class="md-path__link">
           
   <span class="md-ellipsis">
     Creating a GAMBIT Database
@@ -1665,310 +1121,88 @@
   
 
 
-<h1 id="module-overview">Module Overview<a class="headerlink" href="#module-overview" title="Permanent link">¶</a></h1>
-<p>The gambitdb-nf pipeline is composed of several specialized modules that work together to create a high-quality GAMBIT database. This page provides an overview of all modules and their roles in the pipeline.</p>
-<h2 id="pipeline-architecture">Pipeline Architecture<a class="headerlink" href="#pipeline-architecture" title="Permanent link">¶</a></h2>
-<p>The pipeline follows a modular architecture with three main categories:</p>
+<h1 id="gambit-database-creation">GAMBIT Database Creation<a class="headerlink" href="#gambit-database-creation" title="Permanent link">¶</a></h1>
+<p>GAMBIT (Genomic Approximation Method for Bacterial Identification and Tracking) incorporates k-mer based strategy for the identification of taxonomic information with a highly curated searchable database.</p>
+<p>A GAMBIT databases consist of two files:</p>
 <ol>
-<li><strong>Data Ingestion</strong> - Parsing and downloading</li>
-<li><strong>Processing</strong> - Quality control, distance calculations, and downsampling</li>
-<li><strong>Database Creation</strong> - Final curation and database assembly</li>
+<li>A <strong>signatures file</strong> containing the GAMBIT signatures (compressed representations) of all genomes represented in the database; </li>
+<li>A <strong>metadata file</strong> relating the represented genomes to their genome accessions, taxonomic identifications, and species thresholds.</li>
 </ol>
-<h2 id="core-modules">Core Modules<a class="headerlink" href="#core-modules" title="Permanent link">¶</a></h2>
-<h3 id="data-ingestion-modules">Data Ingestion Modules<a class="headerlink" href="#data-ingestion-modules" title="Permanent link">¶</a></h3>
-<h4 id="gtdb_parser">GTDB_PARSER<a class="headerlink" href="#gtdb_parser" title="Permanent link">¶</a></h4>
-<p><strong>Purpose</strong>: Parse GTDB metadata and filter genomes based on quality criteria</p>
-<p><strong>Inputs</strong>:</p>
+<p>The goal in creating a database for GAMBIT is two-fold:</p>
 <ul>
-<li>GTDB metadata TSV file</li>
+<li>Genomes representing each species in the database must contain enough distinction from other species so that similarity thresholds can be extracted;</li>
+<li>The highest level of confidence is obtained that a genome in the database is actually from the species that matched its labelled identification.</li>
 </ul>
-<p><strong>Outputs</strong>:</p>
+<div class="grid cards">
 <ul>
-<li>Species taxa file</li>
-<li>Filtered genome assembly metadata</li>
-<li>Representative genomes list</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16h-.58l-.81-.81A7.07 7.07 0 0 0 18 11c0-3.87-3.13-7-7-7-1.5 0-3 .5-4.21 1.4-3.09 2.32-3.72 6.71-1.4 9.8s6.71 3.72 9.8 1.4l.81.81V18l5 5 2-2zm-7 0c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5M3 6 1 8V1h7L6 3H3zm18-5v7l-2-2V3h-3l-2-2zM6 19l2 2H1v-7l2 2v3z"></path></svg></span> <strong>GAMBIT allows for rapid taxonomic identification of microbial pathogens.</strong></p>
+<hr>
+<p>The GAMBIT database is designed to facilitate the exploration and analysis of genomic data from a wide variety of prokaryotic or fungal isolates. It integrates and annotates genomic information based on information from curated sources. Several sources of complete and draft genomic sequences exist, with the most common being <a href="https://www.ncbi.nlm.nih.gov/refseq/">RefSeq</a>, <a href="https://www.ncbi.nlm.nih.gov/genbank/">GenBank</a> and <a href="https://gtdb.ecogenomic.org/">GTDB</a>. Alternative sources, such as <a href="https://bakrep.computational.bio/">BakRep</a>, can also be used as long as taxonomic information is available.</p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3c4.42 0 8 1.79 8 4s-3.58 4-8 4-8-1.79-8-4 3.58-4 8-4M4 9c0 2.21 3.58 4 8 4s8-1.79 8-4v3.08L19 12c-2.59 0-4.8 1.64-5.64 3.94L12 16c-4.42 0-8-1.79-8-4zm0 5c0 2.21 3.58 4 8 4h1c0 1.05.27 2.04.75 2.9L12 21c-4.42 0-8-1.79-8-4zm14 7.08-2.75-3 1.16-1.16L18 18.5l3.59-3.58 1.16 1.41z"></path></svg></span> <strong>Several pre-computed GAMBIT databases are available for prokaryotic and fungal genomes.</strong></p>
+<hr>
+<p>The full list of databases available can be consulted <a href="../overview/">here</a>, with information on what curation steps were followed and what genomes are included.</p>
+</li>
 </ul>
-<p><strong>Key Parameters</strong>:</p>
+</div>
+<h2 id="database-creation-process">Database Creation Process<a class="headerlink" href="#database-creation-process" title="Permanent link">¶</a></h2>
+<h3 id="creating-a-gambit-database-from-a-pre-curated-list-of-genomes-gtdb-and-gambitdb-nf">Creating a GAMBIT database from a pre-curated list of genomes - GTDB and GAMBITdb-nf<a class="headerlink" href="#creating-a-gambit-database-from-a-pre-curated-list-of-genomes-gtdb-and-gambitdb-nf" title="Permanent link">¶</a></h3>
+<p>The creation and curation of a GAMBIT database is a laborious process which involves sourcing genomic information, setting minimum quality thresholds, and finally building a signature and a database file.</p>
+<div class="admonition dna">
+<p class="admonition-title">Sourcing Genome Information from GTDB</p>
+<p>As of <a href="../gambit_prokaryotic/#gambit-gtdb-database-v200">v2.0.0 of the GAMBIT Prokaryotic database</a>, <a href="https://gtdb.ecogenomic.org/">GTDB</a> is the selected source of quality information for genomes sourced from <a href="https://www.ncbi.nlm.nih.gov/refseq/">RefSeq</a> and <a href="https://www.ncbi.nlm.nih.gov/genbank/">GenBank</a>. Automation is available through the <a href="https://github.com/gambit-suite/gambitdb-nf">GAMBITdb-nf</a> which takes as input a GTDB release metadata spreadsheet including information on taxonomy and assembly quality metrics. GTDB’s release spreadsheets are available at <a href="https://data.gtdb.ecogenomic.org/releases/">https://data.gtdb.ecogenomic.org/releases</a>. Taxonomic information can be sourced from <a href="https://www.ncbi.nlm.nih.gov/taxonomy">NCBI Taxonomy</a> ofr <a href="https://gtdb.ecogenomic.org/">GTDB</a>.</p>
+</div>
+<hr>
+<h4 id="gambitdb-nf">GAMBITdb-nf<a class="headerlink" href="#gambitdb-nf" title="Permanent link">¶</a></h4>
+<p><a href="https://github.com/gambit-suite/gambitdb-nf">GAMBITdb-nf</a> is a <a href="https://www.nextflow.io/">Nextflow</a> pipeline for creating and maintaining GAMBIT databases from <a href="https://gtdb.ecogenomic.org/">GTDB (Genome Tree Database)</a> metadata. This pipeline automates the entire process of database creation, from quality filtering and genome downloading to k-mer signature generation and strategic downsampling.</p>
+<div class="admonition tip">
+<p class="admonition-title">Key Features</p>
 <ul>
-<li><code>checkm_completeness</code>: Minimum genome completeness (default: 97)</li>
-<li><code>checkm_contamination</code>: Maximum contamination (default: 3)</li>
-<li><code>max_contigs</code>: Maximum number of contigs (default: 100)</li>
-<li><code>minimum_genomes_per_species</code>: Minimum genomes per species (default: 2)</li>
-<li><code>use_ncbi_taxonomy</code>: Whether or not to source taxonomy from NCBI</li>
-<li><code>ncbi_whitelist</code>: List of only SPECIFIC species or genra to source from NCBI</li>
+<li><strong>Automated Quality Control</strong>: Filter genomes based on <a href="https://github.com/chklovski/CheckM2">CheckM2</a> completeness, contamination, and assembly quality</li>
+<li><strong>Efficient Bulk Downloading</strong>: Parallel download of genome assemblies from <a href="https://www.ncbi.nlm.nih.gov/">NCBI</a> with checkpoint support</li>
+<li><strong>Smart Downsampling</strong>: Stratified downsampling for large species clusters to optimize database size</li>
+<li><strong>Flexible Workflows</strong>: Choose between simple and downsampling workflows based on your needs</li>
+<li><strong>Comprehensive Monitoring</strong>: Built-in execution reports and detailed logging</li>
+<li><strong>Container Support</strong>: Works with <a href="https://www.docker.com/">Docker</a>, <a href="https://docs.sylabs.io/guides/3.5/user-guide/introduction.html">Singularity</a>, <a href="https://anaconda.org/anaconda/conda">Conda</a>, <a href="https://podman.io/">Podman</a>, or <a href="https://apptainer.org/">Apptainer</a></li>
 </ul>
-<h4 id="bulk_downloader">BULK_DOWNLOADER<a class="headerlink" href="#bulk_downloader" title="Permanent link">¶</a></h4>
-<p><strong>Purpose</strong>: Download genome assemblies from NCBI in parallel batches</p>
-<p><strong>Inputs</strong>:</p>
+</div>
+<div class="admonition dna">
+<p class="admonition-title">Support</p>
 <ul>
-<li>Genome assembly metadata</li>
+<li><a href="https://github.com/gambit-suite/gambitdb-nf">GitHub Repository</a></li>
+<li><a href="https://github.com/gambit-suite/gambitdb-nf/issues">Report Issues</a></li>
 </ul>
-<p><strong>Outputs</strong>:</p>
+</div>
+<p><a href="https://github.com/gambit-suite/gambitdb-nf">GAMBITdb-nf</a> provides two main workflows:</p>
+<div class="grid cards">
 <ul>
-<li>Downloaded FASTA files</li>
-<li>Assembly metadata for downloaded genomes</li>
+<li>
+<p><strong>GAMBITDB_SIMPLE</strong></p>
+<hr>
+<p>A streamlined workflow for <strong>creating GAMBIT databases without downsampling</strong>. 
+<br>
+This version is best for smaller datasets or for when you want to include all available genomes.</p>
+</li>
+<li>
+<p><strong>GAMBITDB_DOWNSAMPLE</strong></p>
+<hr>
+<p>An advanced workflow with <strong>intelligent downsampling for large species clusters</strong>. 
+<br>
+This version is ideal for comprehensive GTDB releases where some species have thousands of genomes.</p>
+</li>
 </ul>
-<p><strong>Key Parameters</strong>:</p>
+</div>
+<p>The pipeline produces:</p>
 <ul>
-<li><code>max_workers</code>: Parallel download workers (default: 8)</li>
-<li><code>batch_size</code>: Genomes per batch (default: 1000)</li>
-<li><code>api_key</code>: NCBI API key for higher rate limits</li>
-<li><code>max_retries</code>: Retry attempts per batch (default: 3)</li>
+<li><strong>GAMBIT Database</strong>: Ready-to-use database files for GAMBIT analysis</li>
+<li><strong>K-mer Signatures</strong>: Genomic signatures for all included genomes</li>
+<li><strong>Distance Matrices</strong>: Pairwise genomic distances</li>
+<li><strong>Quality Reports</strong>: Curation metadata and analysis results</li>
+<li><strong>Execution Reports</strong>: Resource usage and pipeline performance metrics</li>
 </ul>
-<h3 id="processing-modules">Processing Modules<a class="headerlink" href="#processing-modules" title="Permanent link">¶</a></h3>
-<h4 id="generate_species_lists">GENERATE_SPECIES_LISTS<a class="headerlink" href="#generate_species_lists" title="Permanent link">¶</a></h4>
-<p><strong>Purpose</strong>: Organize genomes into species-specific directories</p>
-<p><strong>Inputs</strong>:</p>
-<ul>
-<li>Assembly metadata</li>
-<li>Species taxa file</li>
-</ul>
-<p><strong>Outputs</strong>:</p>
-<ul>
-<li>Species-specific file lists</li>
-</ul>
-<h4 id="gambit_dists_by_species">GAMBIT_DISTS_BY_SPECIES<a class="headerlink" href="#gambit_dists_by_species" title="Permanent link">¶</a></h4>
-<p><strong>Purpose</strong>: Calculate GAMBIT k-mer signatures and distance matrices for each species</p>
-<p><strong>Inputs</strong>:</p>
-<ul>
-<li>Species file directories</li>
-<li>Genome FASTA files</li>
-</ul>
-<p><strong>Outputs</strong>:</p>
-<ul>
-<li>K-mer signatures per species</li>
-<li>Distance matrices per species</li>
-<li>Diameter calculations per species</li>
-</ul>
-<p><strong>Note</strong>: This module runs in parallel for all species, making it highly scalable.</p>
-<h4 id="gambit_dists_combined">GAMBIT_DISTS_COMBINED<a class="headerlink" href="#gambit_dists_combined" title="Permanent link">¶</a></h4>
-<p><strong>Purpose</strong>: Calculate combined distance matrix for all filtered genomes</p>
-<p><strong>Inputs</strong>:</p>
-<ul>
-<li>Combined genome set after downsampling/filtering</li>
-</ul>
-<p><strong>Outputs</strong>:</p>
-<ul>
-<li>Combined signatures</li>
-<li>Combined distance matrix (CSV and NumPy formats)</li>
-<li>Combined diameters</li>
-</ul>
-<h4 id="gambit_curate">GAMBIT_CURATE<a class="headerlink" href="#gambit_curate" title="Permanent link">¶</a></h4>
-<p><strong>Purpose</strong>: Quality control and outlier detection using distance-based methods</p>
-<p><strong>Inputs</strong>:</p>
-<ul>
-<li>Assembly directory</li>
-<li>Distance matrix</li>
-<li>Diameter calculations</li>
-<li>Genome metadata</li>
-</ul>
-<p><strong>Outputs</strong>:</p>
-<ul>
-<li>Curated genome metadata</li>
-<li>Curated species file</li>
-</ul>
-<p><strong>Features</strong>:</p>
-<ul>
-<li>Identifies genomic outliers</li>
-<li>Validates species assignments</li>
-<li>Ensures database quality</li>
-</ul>
-<h3 id="optimization-modules">Optimization Modules<a class="headerlink" href="#optimization-modules" title="Permanent link">¶</a></h3>
-<h4 id="analyze_curated">ANALYZE_CURATED<a class="headerlink" href="#analyze_curated" title="Permanent link">¶</a></h4>
-<p><strong>Purpose</strong>: Analyze curated results to identify species requiring downsampling</p>
-<p><strong>Inputs</strong>:</p>
-<ul>
-<li>Curated species metadata</li>
-</ul>
-<p><strong>Outputs</strong>:</p>
-<ul>
-<li>Species analysis reports</li>
-<li>Downsample target lists</li>
-</ul>
-<h4 id="stratified_downsample">STRATIFIED_DOWNSAMPLE<a class="headerlink" href="#stratified_downsample" title="Permanent link">¶</a></h4>
-<p><strong>Purpose</strong>: Stratified based downsampling method for genome counts for overrepresented species</p>
-<p><strong>Inputs</strong>:</p>
-<ul>
-<li>Distance matrices</li>
-<li>Curated metadata</li>
-<li>Representative genomes</li>
-<li>Downsample targets</li>
-</ul>
-<p><strong>Outputs</strong>:</p>
-<ul>
-<li>Keep genomes list</li>
-<li>Remove genomes list</li>
-</ul>
-<p><strong>Key Parameters</strong>:</p>
-<ul>
-<li><code>downsample_threshold</code>: Minimum genomes to trigger downsampling (default: 1000)</li>
-<li><code>k</code>: Number of clusters (default: 100)</li>
-<li><code>n_pairs</code>: Target pairs to select (default: 500)</li>
-</ul>
-<p><strong>Algorithm</strong>:</p>
-<ol>
-<li>Bin genomes using distance matrix</li>
-<li>Select representative from each cluster</li>
-<li>Ensure diversity preservation</li>
-<li>Maintain genomes responsible for min/max distance thresholds and reference genomes</li>
-</ol>
-<h4 id="filter_combine_genomes">FILTER_COMBINE_GENOMES<a class="headerlink" href="#filter_combine_genomes" title="Permanent link">¶</a></h4>
-<p><strong>Purpose</strong>: Remove downsampled genomes and combine filtered dataset</p>
-<p><strong>Inputs</strong>:</p>
-<ul>
-<li>FASTA directory</li>
-<li>Assembly metadata</li>
-<li>Species taxa</li>
-<li>Remove genomes list</li>
-</ul>
-<p><strong>Outputs</strong>:</p>
-<ul>
-<li>Filtered combined dataset</li>
-</ul>
-<h3 id="utility-modules">Utility Modules<a class="headerlink" href="#utility-modules" title="Permanent link">¶</a></h3>
-<h4 id="combine_analysis_results">COMBINE_ANALYSIS_RESULTS<a class="headerlink" href="#combine_analysis_results" title="Permanent link">¶</a></h4>
-<p><strong>Purpose</strong>: Aggregate analysis results across all species</p>
-<p><strong>Inputs</strong>:</p>
-<ul>
-<li>Per-species analysis outputs</li>
-<li>Downsample targets</li>
-</ul>
-<p><strong>Outputs</strong>:</p>
-<ul>
-<li>Combined species analysis</li>
-<li>Combined downsample targets</li>
-</ul>
-<h4 id="add_genus_rows">ADD_GENUS_ROWS<a class="headerlink" href="#add_genus_rows" title="Permanent link">¶</a></h4>
-<p><strong>Purpose</strong>: Add genus-level entries to enable genus-level classification</p>
-<p><strong>Inputs</strong>:</p>
-<ul>
-<li>Species taxon file</li>
-</ul>
-<p><strong>Outputs</strong>:</p>
-<ul>
-<li>Species file with genus rows</li>
-</ul>
-<h3 id="database-creation-modules">Database Creation Modules<a class="headerlink" href="#database-creation-modules" title="Permanent link">¶</a></h3>
-<h4 id="create_gambit_db">CREATE_GAMBIT_DB<a class="headerlink" href="#create_gambit_db" title="Permanent link">¶</a></h4>
-<p><strong>Purpose</strong>: Assemble the final GAMBIT database</p>
-<p><strong>Inputs</strong>:</p>
-<ul>
-<li>Curated genome metadata</li>
-<li>Species taxon file (with genus rows)</li>
-<li>K-mer signatures</li>
-</ul>
-<p><strong>Outputs</strong>:</p>
-<ul>
-<li>GAMBIT database file (.gdb)</li>
-<li>GAMBIT signatures file (.gs)</li>
-</ul>
-<p><strong>Key Parameters</strong>:</p>
-<ul>
-<li><code>db_key</code>: Database identifier</li>
-<li><code>db_version</code>: Database version</li>
-<li><code>db_author</code>: Database creator</li>
-<li><code>db_date</code>: Creation date</li>
-</ul>
-<h2 id="module-dependencies">Module Dependencies<a class="headerlink" href="#module-dependencies" title="Permanent link">¶</a></h2>
-<p>The modules follow this general flow:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>GTDB_PARSER → BULK_DOWNLOADER → GENERATE_SPECIES_LISTS
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>                                         ↓
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>                                GAMBIT_DISTS_BY_SPECIES
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>                                         ↓
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                                  GAMBIT_CURATE
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>                                         ↓
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>                                  ANALYZE_CURATED
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>                                         ↓
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>                              STRATIFIED_DOWNSAMPLE (optional)
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>                                         ↓
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>                              FILTER_COMBINE_GENOMES
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>                                         ↓
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>                              GAMBIT_DISTS_COMBINED
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>                                         ↓
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>                                  GAMBIT_CURATE
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>                                         ↓
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>                                  ADD_GENUS_ROWS
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>                                         ↓
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>                                 CREATE_GAMBIT_DB
-</span></code></pre></div>
-<h2 id="workflow-variants">Workflow Variants<a class="headerlink" href="#workflow-variants" title="Permanent link">¶</a></h2>
-<h3 id="gambitdb_simple">GAMBITDB_SIMPLE<a class="headerlink" href="#gambitdb_simple" title="Permanent link">¶</a></h3>
-<p>Uses a subset of modules for straightforward database creation without downsampling:</p>
-<ul>
-<li>Skips species-level processing</li>
-<li>Directly processes combined dataset</li>
-<li>Faster for smaller datasets</li>
-</ul>
-<h3 id="gambitdb_downsample">GAMBITDB_DOWNSAMPLE<a class="headerlink" href="#gambitdb_downsample" title="Permanent link">¶</a></h3>
-<p>Uses the complete module suite with downsampling optimization:</p>
-<ul>
-<li>Species-level parallel processing</li>
-<li>Intelligent downsampling</li>
-<li>Optimal for large GTDB releases</li>
-</ul>
-<h2 id="module-documentation">Module Documentation<a class="headerlink" href="#module-documentation" title="Permanent link">¶</a></h2>
-<p>For detailed information about specific modules:</p>
-<ul>
-<li><a href="../create_gambit_db/">Create GAMBIT Database</a></li>
-</ul>
-<h2 id="resource-requirements">Resource Requirements<a class="headerlink" href="#resource-requirements" title="Permanent link">¶</a></h2>
-<p>Different modules have different resource profiles:</p>
-<table>
-<thead>
-<tr>
-<th>Module</th>
-<th>CPU</th>
-<th>Memory</th>
-<th>Time</th>
-<th>Scalability</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GTDB_PARSER</td>
-<td>Low</td>
-<td>Low</td>
-<td>Fast</td>
-<td>Linear</td>
-</tr>
-<tr>
-<td>BULK_DOWNLOADER</td>
-<td>Medium</td>
-<td>Low</td>
-<td>Variable</td>
-<td>Parallel</td>
-</tr>
-<tr>
-<td>GAMBIT_DISTS_BY_SPECIES</td>
-<td>Medium</td>
-<td>Medium</td>
-<td>Medium</td>
-<td>Parallel per species</td>
-</tr>
-<tr>
-<td>GAMBIT_CURATE</td>
-<td>Medium</td>
-<td>Medium</td>
-<td>Fast</td>
-<td>Per species/combined</td>
-</tr>
-<tr>
-<td>STRATIFIED_DOWNSAMPLE</td>
-<td>Medium</td>
-<td>High</td>
-<td>Medium</td>
-<td>Per large species</td>
-</tr>
-<tr>
-<td>CREATE_GAMBIT_DB</td>
-<td>Low</td>
-<td>Medium</td>
-<td>Fast</td>
-<td>Single</td>
-</tr>
-</tbody>
-</table>
-<p>Resource allocations can be adjusted in <code>conf/base.config</code>.</p>
+<hr>
 
 
 
@@ -2001,7 +1235,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 27, 2025 15:50:25 UTC">2025-11-27</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 27, 2025 14:09:21 UTC">2025-11-27</span>
   </span>
 
     
