@@ -14,7 +14,7 @@ conda install -c bioconda gambit
 
 ### Installation with Docker
 
-The latest version of GAMBIT software is available as a Docker container in Theiagen’s [Google Artifact Registry (GAR)](https://cloud.google.com/artifact-registry). If [Docker is installed in your system](https://docs.docker.com/engine/install/) you can simply run the following command to download the container:
+The latest version of GAMBIT software is available as a Docker container in Theiagen’s [Google Artifact Registry (GAR)](https://cloud.google.com/artifact-registry). If [Docker is installed in your system](https://docs.docker.com/engine/install/), you can simply run the following command to download the container:
 
 ```bash
 docker pull us-docker.pkg.dev/general-theiagen/staphb/gambit:1.0.0
@@ -43,6 +43,11 @@ pip install .
 ## Usage
 
 Positional arguments are one or more FASTA files containing query genome assemblies. You must provide the path to the directory containing the database files using either the `-d` option (*before* the `query` subcommand) or by setting the `GAMBIT_DB_PATH` environment variable. The results can be optionally outputted to a file, but by default, they are written to the terminal.
+
+```bash
+# optional
+GAMBIT_DB_PATH=/path/to/database/
+```
 
 ```bash
 gambit [-d </path/to/database/>] query [-o results.csv] genome1.fasta genome2.fasta ...
