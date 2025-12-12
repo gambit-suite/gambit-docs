@@ -29,10 +29,10 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install mkdocs-material mkdocs-material-extensions mkdocs-git-revision-date-localized-plugin mike mkdocs-glightbox mkdocs-macros-plugin mkdocs-mermaid2-plugin pandas 
+          pip install mkdocs-material mkdocs-material-extensions mkdocs-git-revision-date-localized-plugin mkdocs-glightbox mkdocs-macros-plugin mkdocs-mermaid2-plugin pandas 
       
       - name: Build documentation
         run: |
           git config user.name cimendes
           git config user.email ines.mendes@theiagen.com 
-          mike deploy --push main
+          mkdocs gh-deploy
