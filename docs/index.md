@@ -69,3 +69,5 @@ Please cite the reference below when using the **GAMBIT Fungal Database v0.2.0:*
 ## Help Available
 
 Please feel free to reach out to <support@theiagen.com> with any questions you might have.
+
+---
