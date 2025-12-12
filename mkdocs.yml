@@ -1,7 +1,7 @@
 site_name: GAMBIT
 site_author: Theiagen Genomics
 site_description: Genomic Approximation Method for Bacterial Identification and Tracking Documentation
-site_url: https://gambit-suite.github.io/gambit
+site_url: https://gambit-suite.github.io/gambit-docs/
 
 repo_url: https://github.com/gambit-suite/gambit-docs
 
