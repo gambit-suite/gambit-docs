@@ -11,7 +11,7 @@ This allows not only thousands of genomes to be represented in a relatively smal
 
 ## Distance Metric Calculation
 
-The **Jaccard Index**, also known as the Jaccard Similarity Coefficient, is a statistic used for gauging the similarity and diversity between two sample sets. It ranges from 0 to 1, where if 0 the sets have no elements in common, whereas if 1 the sets are identical. In GAMBIT, the Jaccard Index is used to compare genetic sequences.
+The **Jaccard Index**, also known as the Jaccard Similarity Coefficient, is a statistic used for gauging the similarity and diversity between two sample sets. It ranges from 0 to 1, where if 0 the sets are identical and if 1, the sets have no elements in common.
 
 !!! warning "Jacard Distance vs Index"
     The **Jaccard Distance**, equal to one minus the Jaccard index, shares the same properties as the Jaccard index albeit inversely. It ranges from 0 to 1, where  0 the sets are identical and if 1, the sets have no elements in common.
@@ -22,7 +22,7 @@ In GAMBIT, the Jaccard Distance is calculated between two pre-computed k-mer set
 
 GAMBIT classifies unknown genomes by finding the distance to the closest reference genome and comparing that distance against the thresholds of the reference genome’s species and genus.
 
-For GAMBIT Prokaryotic database v2.0.0 and above, the threshold for a given species corresponds to the maximum intra-species distance ("max intra," or diameter) (**Figure 1**). Some species are not well separated from their closest sister taxon and, in some cases, even overlap. Such as the case of *Escherichia coli* and *Shigella sonnei* in GAMBIT’s Prokaryotic Database. In these scenarios, the species were divided into subspecies groups based on clustering of their intra-species distances, and then reporting matches to these subgroups and their parent species.
+For GAMBIT Prokaryotic database v2.0.0 and above, the threshold for a given species corresponds to the maximum intra-species distance ("max intra" or diameter) (**Figure 1**). Some species are not well separated from their closest sister taxon and, in some cases, even overlap. This is the case of *Escherichia coli* and *Shigella sonnei* in GAMBIT’s Prokaryotic Database. In these scenarios, the species were divided into subspecies groups based on clustering of their intra-species distances.
 
 If the query genome distance is greater than the species diameter, GAMBIT attempts to report the genus. Genus diameters are computed and manually curated based on the diversity of the genus.
 
