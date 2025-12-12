@@ -9,14 +9,14 @@ As of [v2.0.0](#gambit-gtdb-database-v200), the GAMBIT Prokaryotic Database is b
 
 ## GAMBIT GTDB Database v2.1.0
 
-This database is a **minor update** to the v2.0.1 database. This database is identical to the v2.0.1 database, **except for the following modifications**.
+This database is a **minor update** to the v2.0.1 database. This database is identical to the v2.0.1 database, **except for the following modifications**:
 
 1. Genomes representing *Salmonella enterica* subspecies houtenae and diarizonae were added to the database.
-    a. Rationale: In the v2.0.0 and v2.0.1 databases, no genomes representing these subspecies are present, therefore query genomes representing these subspecies were not reliably classifed as *Salmonella enterica*.
+    1. Rationale: In the v2.0.0 and v2.0.1 databases, no genomes representing these subspecies are present, therefore query genomes representing these subspecies were not reliably classifed as *Salmonella enterica*.
 2. The *Salmonella arizonae* species was modified to be a subspecies of *Salmonella enterica*.
-    a. Rationale: While GTDB classifies *Salmonella arizonae* as its own species due to its divergence from other Salmonella species, NCBI considers *Salmonella arizonae* a subspecies of *Salmonella enterica*. *Salmonella enterica* is also the typical naming convention within public health laboratories, therefore we have renamed the species to align with user preference.
+    2. Rationale: While GTDB classifies *Salmonella arizonae* as its own species due to its divergence from other Salmonella species, NCBI considers *Salmonella arizonae* a subspecies of *Salmonella enterica*. *Salmonella enterica* is also the typical naming convention within public health laboratories, therefore we have renamed the species to align with user preference.
 3. The following genomes below were removed. 
-    a. Rationale: These genomes are currently named as *Shigella* species in NCBI, but are actually *Escherichia coli* according to the best match type strain using ANI. Their removal from the database prevents false assignment of *Echerichia coli* query genomes to *Shigella* species.
+    3. Rationale: These genomes are currently named as *Shigella* species in NCBI, but are actually *Escherichia coli* according to the best match type strain using ANI. Their removal from the database prevents false assignment of *Echerichia coli* query genomes to *Shigella* species.
 
     ??? toggle "Removed Accessions"
             GCF_002247485.1 
@@ -45,7 +45,7 @@ These database files are hosted in a public "Requester Pays" Google bucket by Th
 
 ## GAMBIT GTDB Database v2.0.1
 
-This database is a **patch update** to the v2.0.0 database. This database is identical to the v2.0.0 database **except that the following genomes were removed**. 
+This database is a **patch update** to the v2.0.0 database. This database is identical to the v2.0.0 database **except that the following genomes were removed**: 
 
 ??? toggle "Removed Accessions"
         GCF_003977345.1
@@ -85,10 +85,8 @@ This database is a **major update** to the Curated v1.3.0 database. This iterati
 This database was computed from [GTDB Release 214.1](https://gtdb.ecogenomic.org/stats/r214) as of April 28th, 2023. 
 
 - **Automated curation efforts**
-    
-    The following curation steps were followed for all species:
-    
-    - The candidates for an existing genus were collapsed (e.g genus_A, genus_B becomes genus)
+        
+    For all species, the candidates for an existing genus were collapsed (e.g genus_A, genus_B becomes genus).
     
     The following species were updated:
     

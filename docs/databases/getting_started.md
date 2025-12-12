@@ -3,7 +3,7 @@
 This guide will help you install and run [GAMBITdb-nf](https://github.com/gambit-suite/gambitdb-nf) for the first time.
 
 !!! tip "GAMBITdb-nf input"
-    [GAMBITdb-nf](https://github.com/gambit-suite/gambitdb-nf) is designed to take an tsv input from a [GTDB release](https://gtdb.ecogenomic.org/downloads) and filter out potentially poor data based on CheckM2, number of contigs, and where there are less than 2 genomes (defaults). The pipeline will then download the genomes of provided accessions, downsample for species where n genomes is greater than the `downsample_threshold` and create the gambit metadata sqlite file, and the h5 signature file. 
+    [GAMBITdb-nf](https://github.com/gambit-suite/gambitdb-nf) is designed to take a tsv input from a [GTDB release](https://gtdb.ecogenomic.org/downloads) and filter out potentially poor data based on CheckM2, number of contigs, and where there are less than 2 genomes (defaults). The pipeline will then download the genomes of provided accessions, downsample for species where n genomes is greater than the `downsample_threshold` and create the gambit metadata sqlite file and the h5 signature file. 
 
 ## Workflow Diagram
 
@@ -291,6 +291,7 @@ results/
 ```
 
 The final GAMBIT database files will be in `results/<release-tag>/create_gambit_db/`:
+
 - `database.gdb` - Main metadata database file
 - `database.gs` - Signatures file
 

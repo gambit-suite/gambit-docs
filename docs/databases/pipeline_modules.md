@@ -19,14 +19,17 @@ The pipeline follows a modular architecture with three main categories:
 **Purpose**: Parse GTDB metadata and filter genomes based on quality criteria
 
 **Inputs**:
+
 - GTDB metadata TSV file
 
 **Outputs**:
+
 - Species taxa file
 - Filtered genome assembly metadata
 - Representative genomes list
 
 **Key Parameters**:
+
 - `checkm_completeness`: Minimum genome completeness (default: 97)
 - `checkm_contamination`: Maximum contamination (default: 3)
 - `max_contigs`: Maximum number of contigs (default: 100)
@@ -39,13 +42,16 @@ The pipeline follows a modular architecture with three main categories:
 **Purpose**: Download genome assemblies from NCBI in parallel batches
 
 **Inputs**:
+
 - Genome assembly metadata
 
 **Outputs**:
+
 - Downloaded FASTA files
 - Assembly metadata for downloaded genomes
 
 **Key Parameters**:
+
 - `max_workers`: Parallel download workers (default: 8)
 - `batch_size`: Genomes per batch (default: 1000)
 - `api_key`: NCBI API key for higher rate limits
@@ -58,10 +64,12 @@ The pipeline follows a modular architecture with three main categories:
 **Purpose**: Organize genomes into species-specific directories
 
 **Inputs**:
+
 - Assembly metadata
 - Species taxa file
 
 **Outputs**:
+
 - Species-specific file lists
 
 #### GAMBIT_DISTS_BY_SPECIES
@@ -69,10 +77,12 @@ The pipeline follows a modular architecture with three main categories:
 **Purpose**: Calculate GAMBIT k-mer signatures and distance matrices for each species
 
 **Inputs**:
+
 - Species file directories
 - Genome FASTA files
 
 **Outputs**:
+
 - K-mer signatures per species
 - Distance matrices per species
 - Diameter calculations per species
@@ -84,9 +94,11 @@ The pipeline follows a modular architecture with three main categories:
 **Purpose**: Calculate combined distance matrix for all filtered genomes
 
 **Inputs**:
+
 - Combined genome set after downsampling/filtering
 
 **Outputs**:
+
 - Combined signatures
 - Combined distance matrix (CSV and NumPy formats)
 - Combined diameters
@@ -96,16 +108,19 @@ The pipeline follows a modular architecture with three main categories:
 **Purpose**: Quality control and outlier detection using distance-based methods
 
 **Inputs**:
+
 - Assembly directory
 - Distance matrix
 - Diameter calculations
 - Genome metadata
 
 **Outputs**:
+
 - Curated genome metadata
 - Curated species file
 
 **Features**:
+
 - Identifies genomic outliers
 - Validates species assignments
 - Ensures database quality
@@ -117,9 +132,11 @@ The pipeline follows a modular architecture with three main categories:
 **Purpose**: Analyze curated results to identify species requiring downsampling
 
 **Inputs**:
+
 - Curated species metadata
 
 **Outputs**:
+
 - Species analysis reports
 - Downsample target lists
 
@@ -128,21 +145,25 @@ The pipeline follows a modular architecture with three main categories:
 **Purpose**: Stratified based downsampling method for genome counts for overrepresented species
 
 **Inputs**:
+
 - Distance matrices
 - Curated metadata
 - Representative genomes
 - Downsample targets
 
 **Outputs**:
+
 - Keep genomes list
 - Remove genomes list
 
 **Key Parameters**:
+
 - `downsample_threshold`: Minimum genomes to trigger downsampling (default: 1000)
 - `k`: Number of clusters (default: 100)
 - `n_pairs`: Target pairs to select (default: 500)
 
 **Algorithm**:
+
 1. Bin genomes using distance matrix
 2. Select representative from each cluster
 3. Ensure diversity preservation
@@ -153,12 +174,14 @@ The pipeline follows a modular architecture with three main categories:
 **Purpose**: Remove downsampled genomes and combine filtered dataset
 
 **Inputs**:
+
 - FASTA directory
 - Assembly metadata
 - Species taxa
 - Remove genomes list
 
 **Outputs**:
+
 - Filtered combined dataset
 
 ### Utility Modules
@@ -168,10 +191,12 @@ The pipeline follows a modular architecture with three main categories:
 **Purpose**: Aggregate analysis results across all species
 
 **Inputs**:
+
 - Per-species analysis outputs
 - Downsample targets
 
 **Outputs**:
+
 - Combined species analysis
 - Combined downsample targets
 
@@ -180,9 +205,11 @@ The pipeline follows a modular architecture with three main categories:
 **Purpose**: Add genus-level entries to enable genus-level classification
 
 **Inputs**:
+
 - Species taxon file
 
 **Outputs**:
+
 - Species file with genus rows
 
 ### Database Creation Modules
@@ -192,15 +219,18 @@ The pipeline follows a modular architecture with three main categories:
 **Purpose**: Assemble the final GAMBIT database
 
 **Inputs**:
+
 - Curated genome metadata
 - Species taxon file (with genus rows)
 - K-mer signatures
 
 **Outputs**:
+
 - GAMBIT database file (.gdb)
 - GAMBIT signatures file (.gs)
 
 **Key Parameters**:
+
 - `db_key`: Database identifier
 - `db_version`: Database version
 - `db_author`: Database creator

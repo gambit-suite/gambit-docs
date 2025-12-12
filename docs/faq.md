@@ -22,7 +22,7 @@ Please feel free to reach out to <support@theiagen.com> with any questions you m
         sqlite3 <gambit metadata gdb file> "SELECT * FROM taxa;" > list-of-taxa.tsv
         ```
         
-        To retrieve the list of genomes, the following command can be run. Substitute `<gambit metadata gdb file>` by your metadata file location.
+        To retrieve the list of genomes, the following command can be run. Substitute `<gambit metadata gdb file>` with your metadata file location.
         
         ```bash
         sqlite3 <gambit metadata gdb file> "SELECT * FROM genomes;" > list-of-genome.tsv

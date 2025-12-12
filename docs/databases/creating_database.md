@@ -63,13 +63,17 @@ The creation and curation of a GAMBIT database is a laborious process which invo
 
     ---
 
-    A streamlined workflow for **creating GAMBIT databases without downsampling**. Best for smaller datasets or when you want to include all available genomes.
+    A streamlined workflow for **creating GAMBIT databases without downsampling**. 
+    <br>
+    This version is best for smaller datasets or for when you want to include all available genomes.
 
 -   **GAMBITDB_DOWNSAMPLE**
 
     ---
 
-    An advanced workflow with **intelligent downsampling for large species clusters**. Ideal for comprehensive GTDB releases where some species have thousands of genomes.
+    An advanced workflow with **intelligent downsampling for large species clusters**. 
+    <br>
+    This version is ideal for comprehensive GTDB releases where some species have thousands of genomes.
 
 </div>
 

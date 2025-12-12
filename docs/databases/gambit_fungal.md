@@ -15,9 +15,9 @@ The GAMBIT Fungal Database v1.0.0 database was constructed based on the availabl
 **Manual curation efforts**
 
 - Species were curated based on GAMBIT diameter:
-- The database was manually curated to remove highly distant genomes which were likely mislabeled.
-- Six species were divided into subspecies to ensure non-overlapping species diameters.
-- Two pairs of species were too closely related to distinguish (*Aspergillus flavus/Aspergillus oryzae* and *Aspergillus niger/Aspergillus welwitschiae*), therefore were combined.
+    - The database was manually curated to remove highly distant genomes which were likely mislabeled.
+    - Six species were divided into subspecies to ensure non-overlapping species diameters.
+    - Two pairs of species were too closely related to distinguish (*Aspergillus flavus/Aspergillus oryzae* and *Aspergillus niger/Aspergillus welwitschiae*), therefore were combined.
 
 **Database Files**
 
@@ -50,9 +50,9 @@ The GAMBIT Fungal Database v0.2.0 database was used for the analysis described i
 **Manual curation efforts**
 
 - Species were curated based on GAMBIT diameter:
-- The database was manually curated to remove highly distant genomes which were likely mislabeled.
-- Nine species were divided into subspecies to ensure non-overlapping species diameters.
-- Two pairs of species were too closely related to distinguish (*Aspergillus flavus/Aspergillus oryzae* and *Aspergillus niger/Aspergillus welwitschiae*), therefore were combined.
+    - The database was manually curated to remove highly distant genomes which were likely mislabeled.
+    - Nine species were divided into subspecies to ensure non-overlapping species diameters.
+    - Two pairs of species were too closely related to distinguish (*Aspergillus flavus/Aspergillus oryzae* and *Aspergillus niger/Aspergillus welwitschiae*), therefore were combined.
 
 **Database Files**
 
